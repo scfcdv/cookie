@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cookieの導入</title>
+    <title>Cookieの設定と表示</title>
 </head>
 <body>
     <script>
@@ -36,9 +36,9 @@
         // クッキーから値を取得して表示する
         var username = getCookie("username");
         if (username !== "") {
-            alert("ようこそ、" + username + "さん！");
+            document.write("ようこそ、" + username + "さん！");
         } else {
-            alert("クッキーが設定されていません。");
+            document.write("クッキーが設定されていません。");
         }
     </script>
 </body>
