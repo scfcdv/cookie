@@ -4,6 +4,7 @@
     <title>Cookieの設定と表示</title>
 </head>
 <body>
+<h1 id="heading">ここに名前が入る</h1>
     <script>
         // クッキーを設定する関数
         function setCookie(name, value, daysToExpire) {
@@ -32,6 +33,8 @@
 
         // ページ読み込み時に実行
         window.onload = function() {
+    var headingElement = document.getElementById("heading");
+    headingElement.textContent = username;
             // クッキーが設定されていない場合は、クッキーを設定する
             var username = getCookie("username");
             if (username === "") {
@@ -43,7 +46,6 @@
             
         };
     </script>
-    <h1 id="heading">ここに名前が入る</h1>
     <input type="text" id="inputField" placeholder="文字を入力してください">
     <button onclick="saveText()">設定</button>
     <script>
