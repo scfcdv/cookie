@@ -11,10 +11,10 @@
 </div>
     <script>
         // クッキーを設定する関数
-        function setCookie(name, value) {
+        function setCookie(name, value, daysToExpire) {
             var date = new Date();
             date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
-        　　var expires = "expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        　　var expires = "expires=Fri, 31 Dec 9999 23:59:59 GMT" + date.toUTCString();
             document.cookie = name + "=" + value + ";" + expires + ";path=/";
         }
 
