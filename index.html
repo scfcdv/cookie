@@ -35,7 +35,7 @@
             // クッキーが設定されていない場合は、クッキーを設定する
             var username = getCookie("username");
             if (username === "") {
-                setCookie("username", "John Doe", 30);
+                setCookie("username", "", 30);
             }
 
             // クッキーから値を取得して表示する
@@ -43,5 +43,13 @@
             document.write("ようこそ、" + username + "さん！");
         };
     </script>
+   <input type="text" id="inputField" placeholder="文字を入力してください">
+<button onclick="saveText()">設定</button>
+<script>
+function saveText() {
+var inputValue = document.getElementById('inputField').value;
+setCookie("username", inputValue, 30);
+var savedText = inputValue;}
+</script>
 </body>
 </html>
