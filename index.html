@@ -33,8 +33,6 @@
 
         // ページ読み込み時に実行
         window.onload = function() {
-    var headingElement = document.getElementById("heading");
-    headingElement.textContent = username;
             // クッキーが設定されていない場合は、クッキーを設定する
             var username = getCookie("username");
             if (username === "") {
@@ -43,7 +41,8 @@
             }
 
             // クッキーから値を取得して表示する
-            
+            var headingElement = document.getElementById("heading");
+    headingElement.textContent = username;
         };
     </script>
     <input type="text" id="inputField" placeholder="文字を入力してください">
